@@ -1,9 +1,9 @@
 # Setup azurerm as a state backend
 terraform {
   backend "azurerm" {
-    resource_group_name  = "terraform"
-    storage_account_name = "dpafdevterraform" # Provide Storage Account name, where Terraform Remote state is stored
-    container_name       = "lfrolov"
+    resource_group_name  = ""
+    storage_account_name = "" # Provide Storage Account name, where Terraform Remote state is stored
+    container_name       = ""
     key                  = "bdcc.tfstate"
   }
 }
