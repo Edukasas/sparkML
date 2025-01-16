@@ -1,3 +1,5 @@
+* Create Storage account in Azure for tfstate file
+* Fill in Terraform backend configuration in main.tf
 * Deploy infrastructure with terraform
 ```
 terraform init
