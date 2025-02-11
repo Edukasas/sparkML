@@ -1,7 +1,7 @@
 variable "ENV" {
   type        = string
   description = "The prefix which should be used for all resources in this environment. Make it unique, like ksultanau."
-  default     = "lfrolov1"
+  default     = "development"
 }
 
 variable "LOCATION" {
@@ -38,3 +38,4 @@ variable "IP_RULES" {
     "epam-vpn-by-1" = "86.57.255.94"
   }
 }
+
