@@ -4,7 +4,7 @@ terraform {
     resource_group_name  = "<RESOURCE_GROUP_NAME>" # <== Please provide the Resource Group Name.
     storage_account_name = "<STORAGE_ACCOUNT_NAME>" # <== Please provide Storage Account name, where Terraform Remote state is stored. Example: terraformstate<yourname>
     container_name       = "<CONTAINER_NAME>"
-    key                  = "bdcc.tfstate"
+    key                  = "<STORAGE_ACCOUNT_KEY>"
   }
 }
 
@@ -88,4 +88,9 @@ resource "azurerm_databricks_workspace" "bdcc" {
     region = var.BDCC_REGION
     env    = var.ENV
   }
+}
+
+output "resource_group_name" {
+  description = "The name of the created Azure Resource Group."
+  value       = azurerm_resource_group.bdcc.name
 }
